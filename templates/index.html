@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- Basic -->
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <!-- Mobile Metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <!-- Site Metas -->
+      <meta name="keywords" content="" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <link rel="shortcut icon" href="static/images/favicon.png" type="">
+      <title>Anime World</title>
+      <!-- bootstrap core css -->
+      <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+      <!-- font awesome style -->
+      <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+      <!-- Custom styles for this template -->
+      <link href="static/css/style.css" rel="stylesheet" />
+      <!-- responsive style -->
+      <link href="static/css/responsive.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+         .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+.fa-android {
+  background: #a4c639;
+  color: white;
+}
+
+.fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+
+.fa-vimeo {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
+
+.fa-vine {
+  background: #00b489;
+  color: white;
+}
+
+.fa-foursquare {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-stumbleupon {
+  background: #eb4924;
+  color: white;
+}
+
+.fa-flickr {
+  background: #f40083;
+  color: white;
+}
+
+.fa-yahoo {
+  background: #430297;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+footer {
+   background: #222;
+   padding: 90px 0 70px;
+}
+.fa {
+   padding: 20px;
+   font-size: 30px;
+   width: 69px;
+   text-align: center;
+   text-decoration: none;
+   margin: 5px 2px;
+}
+</style>
+</head>
+   <body>
+      <div class="hero_area">
+         <!-- header section strats -->
+         <header class="header_section">
+            <div class="container">
+               <nav class="navbar navbar-expand-lg custom_nav-container ">
+      
+
+                  <!-- <a href="index.html" class="navbar-link" >
+                     <img alt="Qries" src="https://images.pexels.com/photos/69378/pexels-photo-69378.jpeg?cs=srgb&dl=pexels-mali-maeder-69378.jpg&fm=jpg"
+                     width=150" height="70">
+                  </a>
+                   -->
+
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class=""> </span>
+                  </button>
+                  {% for ot in onetimes  %}
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <ul class="navbar-nav">
+                        <li class="nav-item active">
+                           <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                       
+                        <li class="nav-item">
+                           <a class="nav-link" href= {{ot.products}} >Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href= {{ot.about}} >About</a>
+                         </li>
+                        
+                        <li class="nav-item">
+                           <a class="nav-link" href={{ot.contact}}>Contact</a>
+                        </li>
+                        <li class="nav-item">
+                           
+                        </li>
+                        
+                     </ul>
+                  </div>
+                  {% endfor %}
+               </nav>
+            </div>
+         </header>
+         <!-- end header section -->
+         <!-- slider section -->
+         <section class="slider_section ">
+            {% for ot in onetimes %}
+            <div class="slider_bg_box">
+               <img src= {{ot.Front_pic}} alt="">
+            </div>
+            {% endfor %}
+
+            <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container ">
+                        <div class="row">
+                           <div class="col-md-7 col-lg-6 ">
+                              <div class="detail-box">
+                                 <h1>
+                                    <span>
+                                    Discount On
+                                    </span>
+                                    <br>
+                                    Everything
+                                 </h1>
+                                 <p>
+                                    “We don’t have to know what tomorrow holds! That’s why we can live for everything we’re worth today!” 
+
+– Natsu Dragneel (Fairy Tail)
+                                 </p>
+                                 {% for ot in onetimes %}
+                                 <div class="btn-box">
+
+                                    <a href= {{ot.shop_now}} class="btn1">
+                                    Shop Now
+                                    </a>
+                                 </div>
+                                 {% endfor %}
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  
+               </div>
+              
+            </div>
+         </section>
+         <!-- end slider section -->
+      </div>
+      
+ 
+      
+      <!-- product section -->
+      <section class="product_section layout_padding">
+         
+         <div class="container">
+            
+            <div class="heading_container heading_center">
+               <h2>
+                  Our <span>products</span>
+               </h2>
+            </div>
+            <div class="row">
+               {% for product in products %}
+               <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="box">
+                     <div class="option_container">
+                        <div class="options">
+                        
+                           <a href={{product.buy_now_link}} class="option2">
+                           Buy Now
+                           </a>
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src= {{product.product_image}} alt="image">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           {{product.product_name}}
+                        </h5>
+                        <h6>
+                           {{product.product_prize }}
+                        </h6>
+                     </div>
+                  </div>
+               </div>
+               {% endfor %}
+
+            </div>
+            {% for ot in onetimes %}
+            <div class="btn-box">
+               <a href={{ot.View_All_products}}>
+               View All products
+               </a>
+            </div>
+            {% endfor %}
+         </div>
+         
+      </section>
+      <!-- end product section -->
+
+ 
+
+      <!-- footer start -->
+      <footer>
+      
+
+         {% for l in socialmedia %}
+         <div class="cpy_">
+         
+            <a href={{l.first}} class="fa fa-linkedin" target="_blank"></a>
+            <a href={{l.youtube}} class="fa fa-youtube" target="_blank"></a>
+            <a href={{l.instagram}} class="fa fa-instagram" target="_blank"></a>
+            <p class="mx-auto"><a href="https://html.design/">© 2021 All Rights Reserved</a><br>
+            
+               Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+            
+            </p>
+         </div>  
+         {% endfor %}
+      </footer>
+      <!-- footer end -->
+ 
+      <!-- jQery -->
+      <script src="static/js/jquery-3.4.1.min.js"></script>
+      <!-- popper js -->
+      <script src="static/js/popper.min.js"></script>
+      <!-- bootstrap js -->
+      <script src="static/js/bootstrap.js"></script>
+      <!-- custom js -->
+      <script src="static/js/custom.js"></script>
+   </body>
+</html>
